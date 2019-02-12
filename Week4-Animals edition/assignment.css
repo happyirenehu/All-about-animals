@@ -1,0 +1,32 @@
+.backgroundImage {
+  display: block;
+  background-image: url("IMG_2080.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.catbox {
+	border : solid 1px #000;
+	margin: 20px;
+	border-radius: 5px;	
+    background-color: #fff;
+}
+
+.crop-img {
+  max-height:100%;
+  max-width:100%;
+ 
+}
+
+.animal-thumbnail {
+	max-width:75%;
+}
+
+.modal-img {
+	width:100%;
+}
+
+h1, h3 {
+	text-align: center;
+}
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ <head>
+   <title>Animals</title>
+   <script src="js/jquery-2.1.4.min.js"></script>
+   <script src="js/handlebars-v3.0.3.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="animals.js"></script>
+   <script src="javascripttemplate.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700|Montserrat|Shadows+Into+Light|Trirong" rel="stylesheet">
+   <link href="css/bootstrap.css" rel="stylesheet">
+   <link href="MOOC2Week4CSS.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+   <div>
+      <h1 class="sitename">All About Animals</h1>
+    </div>
+
+    <ul class="nav navbar-default">
+	<li><a href="#" id="category-tab" align="center">Home</a></li>
+    </ul>
+    <br/>
+
+    <div id="content" class="container-fluid">  
+    </div>
+
+    <div id="modal-container">
+    </div>
+  
+  </div>
+<script id="category-template" type="text/x-handlebars-template">
+   <div class="centralised"><h4 clas="instro"style="font-size:4vw;">Click on the type of animal to learn more</h4></div> 
+   <div class="jumbotron backgroundImage">
+    <div class="row">
+       {{#each category}}
+      <div id="snow">
+       <div class="catbox col-sm-6 col-md-3">
+         <div class="category-thumbnail" data-id="{{@index}}">
+            <h3>{{name}}</h3>
+         </div>
+       </div> 
+      </div>  
+       {{/each}}
+    </div>
+    <br/><br/><br/>
+    <h2>Christmas Greetings from our House to yours, May the Season be bright and the year that's ahead turn out to be just right.<br/><br/>With warmest wishes for Good Health and Happiness.
+    <br/><br/>To All my dear classmate an early wishing of a very Merry Christmas and Happy New Year! Merry Christmas! </h2><br/><br/>
+    <h2 style="text-align:right;">Warmest Greeting, Irene</h2> 
+    <br/>
+   </div> 
+   
+
+  </script>
+
+  <script id="animals-template" type="text/x-handlebars-template">
+    <h4 style="font-family: 'Montserrat', sans-serif; font-size:3vw">Click on an animal to check it out!</h4>
+      <div class="row">
+        {{#each animals}}
+        <div class="col-sm-6 col-md-3">
+         <div class="animal-thumbnail" data-id="{{@index}}">
+            <img class="img" src="{{image1}}"/>
+            <h3>{{name}}</h3> 
+          </div>
+         </div> 
+         {{/each}}
+      </div> 
+  </script>
+
+<script id="modal-template" type="text/x-handlebars-template">
+      <div id="imageModal" class="modal">
+        <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+           <div class="modal-body">
+            <h3>{{name}}</h3>
+            <h4>{{description}}</h4>
+            <img class="modal-img" src="{{image2}}" />
+           </div>
+          </div>
+         </div> 
+       </div> 
+       $().ready(function(){
+	$('.basic-modal .basic').click(function (e) {
+		
+			alert("231");
+
+		});
+
+
+ });
+  </script>
+</div>
+  </body>
+</html>
+
+ 
+
+
